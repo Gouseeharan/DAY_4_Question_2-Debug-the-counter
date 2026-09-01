@@ -8,7 +8,7 @@ module counter (
 always @(posedge clk) begin
     if (reset)
         count <= 4'b0000;
-    else if (enable && count == 4'b1010)
+    else if (enable == 1 && count == 4'b1001)
         count <= count + 1;
     else
         count <= 4'b0000;
